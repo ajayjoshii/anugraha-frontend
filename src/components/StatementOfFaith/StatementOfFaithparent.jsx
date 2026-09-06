@@ -1,5 +1,5 @@
 import React from 'react'
-import { StatementOfFaith } from '../../constants/statementOfFaith'
+import { StatementOfFaith } from '../../Constants/StatementOfFaith'
 import StatementOfFaithsChild from './StatementOfFaithsChild'
 
 function StatementOfFaithparent() {
