@@ -26,7 +26,7 @@ function Navbar() {
         <button onClick={() => setOpen(!open)} className='font-bold md:hidden bg-blue-400 px-3 hover:scale-105 py-3 transition duration-500 ease-in-out relative right-4'>{open ? <HiOutlineX /> : <HiOutlineMenu />}</button>
 
 
-        <ul className='sm:flex hidden gap-6 mr-80 font-semibold items-center'>
+        <ul className='sm:flex hidden gap-6 mr-8 font-semibold items-center'>
 
           {navLinks.map((link, index) => (
 
@@ -83,11 +83,24 @@ function Navbar() {
 
         </ul>
 
+
+        <Link to="/plan-a-visit" className='relative right-40 text-centerm hidden'>
+          <p className='text-sm rounded text-[#041a4f] font-bold bg-white hover:scale-105 duration-700 w-30 p-2'>Plan a Visit</p>
+
+        </Link>
+
+        <Link to="/admin/login" className='relative right-40 text-center'>
+          <p className='text-sm rounded text-[#041a4f] font-bold bg-white hover:scale-105 duration-700 w-30 p-2'>Login</p>
+
+        </Link>
+
       </div>
 
       {
         open && (
-          <ul className="md:hidden bg-zinc-100 text-black
+          <>
+
+            <ul className="md:hidden bg-zinc-100 text-black
       flex flex-col
       gap-2 md:gap-7
       md:mr-80
@@ -103,18 +116,18 @@ function Navbar() {
       shadow-xl md:shadow-none
     ">
 
-            {navLinks.map((link, index) => (
-              <li key={index} className="relative w-full md:w-auto text-black">
+              {navLinks.map((link, index) => (
+                <li key={index} className="relative w-full md:w-auto text-black">
 
-                {link.submenu ? (
-                  <>
-                    <button
-                      onClick={() =>
-                        setDropdown(
-                          dropdown === link.name ? null : link.name
-                        )
-                      }
-                      className="
+                  {link.submenu ? (
+                    <>
+                      <button
+                        onClick={() =>
+                          setDropdown(
+                            dropdown === link.name ? null : link.name
+                          )
+                        }
+                        className="
                   group
                   flex items-center gap-2
                   px-4 py-3 md:px-0 md:py-2
@@ -123,12 +136,12 @@ function Navbar() {
                   transition-colors duration-300
                   hover:text-yellow-400
                 "
-                    >
-                      <span className="relative">
-                        {link.name}
+                      >
+                        <span className="relative">
+                          {link.name}
 
-                        {/* Underline only under text */}
-                        <span className="
+                          {/* Underline only under text */}
+                          <span className="
                     absolute
                     left-0
                     -bottom-1
@@ -143,22 +156,22 @@ function Navbar() {
                     duration-500
                     group-hover:w-full text-black
                   " />
-                      </span>
+                        </span>
 
-                      <span
-                        className={`
+                        <span
+                          className={`
                     text-xs
                     transition-transform
                     duration-300
                     ${dropdown === link.name ? "rotate-180" : ""}
                   `}
-                      >
-                        ▼
-                      </span>
-                    </button>
+                        >
+                          ▼
+                        </span>
+                      </button>
 
-                    {dropdown === link.name && (
-                      <ul className=" text-black
+                      {dropdown === link.name && (
+                        <ul className=" text-black
                       absolute left-30 top-1
                   md:absolute
                   md:top-12
@@ -174,16 +187,16 @@ function Navbar() {
                   z-50
                   animate-[dropdown_0.3s_ease-out]
                 ">
-                        {link.submenu.map((item, index) => (
-                          <li key={index}>
-                            <Link
-                              to={item.path}
-                              onClick={() => {
-                                setDropdown(null);
-                                ScrollTop();
-                                setOpen(false)
-                              }}
-                              className="
+                          {link.submenu.map((item, index) => (
+                            <li key={index}>
+                              <Link
+                                to={item.path}
+                                onClick={() => {
+                                  setDropdown(null);
+                                  ScrollTop();
+                                  setOpen(false)
+                                }}
+                                className="
                           group/item
                           block
                           px-4 py-3
@@ -195,12 +208,12 @@ function Navbar() {
                           hover:bg-blue-50
                           hover:text-blue-900
                         "
-                            >
-                              <span className="relative inline-block">
-                                {item.name}
+                              >
+                                <span className="relative inline-block">
+                                  {item.name}
 
-                                {/* Underline only under text */}
-                                <span className="
+                                  {/* Underline only under text */}
+                                  <span className="
                             absolute
                             left-0
                             -bottom-1 text-black
@@ -212,28 +225,28 @@ function Navbar() {
                             duration-300
                             group-hover/item:w-full
                           " />
-                              </span>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                                </span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
 
-                  </>
-                ) : (
-                  <Link
-                    onClick={() => {
-                      ScrollTop();
-                      setOpen(false)
-
-
-                    }
+                    </>
+                  ) : (
+                    <Link
+                      onClick={() => {
+                        ScrollTop();
+                        setOpen(false)
 
 
+                      }
 
-                    }
-                    to={link.path}
-                    className="
+
+
+                      }
+                      to={link.path}
+                      className="
                 group
                 inline-block
                 px-4 py-3
@@ -244,12 +257,12 @@ function Navbar() {
                 duration-300
                 hover:text-yellow-400
               "
-                  >
-                    <span className="relative inline-block">
-                      {link.name}
+                    >
+                      <span className="relative inline-block">
+                        {link.name}
 
-                      {/* Underline only under text */}
-                      <span className="
+                        {/* Underline only under text */}
+                        <span className="
                   absolute
                   left-0
                   -bottom-1
@@ -264,22 +277,26 @@ function Navbar() {
                   duration-500 text-black
                   group-hover:w-full
                 " />
-                    </span>
-                  </Link>
-                )}
+                      </span>
+                    </Link>
+                  )}
 
-              </li>
-            ))}
+                </li>
+              ))}
 
-          </ul>
+            </ul>
+
+            <Link to="/admin/login" className='relative right-40 text-center'>
+              <p className='text-sm rounded text-[#041a4f] font-bold bg-white hover:scale-105 duration-700 w-30 p-2'>Login</p>
+
+            </Link>
+
+          </>
         )
       }
 
 
-      <Link to="/plan-a-visit" className='relative left-270 bottom-12 text-center'>
-        <p className='text-sm rounded text-[#041a4f] font-bold bg-white hover:scale-105 duration-700 w-30 p-2'>Plan a Visit</p>
 
-      </Link>
     </nav>
   )
 }
