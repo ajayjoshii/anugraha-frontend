@@ -13,7 +13,7 @@ function Ladies_Bible() {
         </p>
       </div>
 
-      <div className='flex items-center flex-col md:flex-row justify-center p-4 gap-6'>
+      <div className='flex items-center flex-col md:flex-row w-full justify-center p-4 gap-6'>
         <div className='flex flex-col gap-6 max-w-xl rounded-xl bg-yellow-50 p-6'>
           <FaLeaf className='text-2xl md:text-4xl text-green-400' />
           <h1 className='font-bold text-3xl text-left'>Our Ladies Bible Studies</h1>
