@@ -2486,11 +2486,11 @@ function PastoralTable({
                                         <div className="flex items-center gap-3">
 
                                             <img
-                                                // src={item.img}
-                                                // alt={item.name}
-
-                                                src={`${API.defaults.baseURL}${item.img}`}
+                                                src={item.img}
                                                 alt={item.name}
+
+                                                // src={`${API.defaults.baseURL}${item.img}`}
+                                                // alt={item.name}
                                                 className="w-12 h-12 rounded-full object-cover"
                                             />
 
