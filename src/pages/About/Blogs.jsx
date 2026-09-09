@@ -1,6 +1,5 @@
 import { FaArrowRight, FaStar } from "react-icons/fa";
-import DeaconsParent from "../../components/Deacons/DeaconsParent";
-import Pastoral from "../../components/Pastoral";
+import Blogparent from "../../components/Blogs/Blog";
 
 export default function Blogs() {
   return (
@@ -25,6 +24,11 @@ export default function Blogs() {
           </div>
         </section>
       </main>
+
+      <Blogparent/>
+
+
+      
 
 
       
