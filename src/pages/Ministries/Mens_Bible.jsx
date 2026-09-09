@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function Mens_Bible() {
   return (
     <div className='grid w-full text-center grid-cols-1 md:grid-cols-1 gap-6  mr-15 rounded-sm'>
-      <div className='bg-[#041a4f] flex flex-col items-center mt-16 min-h-100 text-white justify-center'>
+      <div className='bg-[#041a4f] flex flex-col items-center min-h-100 text-white justify-center'>
         <h4 className='text-2xl text-yellow-400 font-bold tracking-tight p-4  sm:text-5xl lg:text-4xl' >Ministries</h4>
         <h1 className='text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-5xl'>Our Men's Bible Studies</h1>
         <p className="mb-4 pt-10 text-sm text-yellow-400 font-semibold uppercase tracking-widest">Biblical fellowship that helps men grow in faith, character, leadership, and service.

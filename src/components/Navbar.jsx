@@ -323,7 +323,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="nav-menu">
+      <div className="nav-menu relative right-60">
         {navLinks.map((item) => (
           <div className="nav-item" key={item.name}>
 
@@ -357,6 +357,12 @@ const Navbar = () => {
 
           </div>
         ))}
+
+
+        <Link to="/plan-a-visit" className='relative sm:left-20 sm:block hidden text-center'>
+          <p className='text-sm rounded text-[#041a4f] font-bold bg-white hover:scale-105 duration-700 w-30 p-2'>Plan a Visit</p>
+
+        </Link>
       </div>
 
       {/* Mobile Button */}

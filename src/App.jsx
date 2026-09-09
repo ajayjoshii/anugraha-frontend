@@ -15,6 +15,7 @@ import Sunday from './pages/Ministries/Sunday';
 import Sermons from './pages/Sermons';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import Blogs from './pages/About/Blogs';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about/our-leaders' element={<AboutHero />} />
+        <Route path='/about/blogs' element={<Blogs />} />
         <Route path='/plan-a-visit' element={<Contact />} />
         <Route path='/about/statement-of-faith' element={<Statementfaith />} />
         <Route path='/about/church-covenant' element={<Church_CovenantParent />} />

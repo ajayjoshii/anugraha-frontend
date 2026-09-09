@@ -40,7 +40,8 @@ export const navLinks = [
     submenu: [
       { name: "Our Leaders", path: "/about/our-leaders" },
       { name: "Statement of Faith", path: "/about/statement-of-faith" },
-      { name: "Church Covenant", path: "/about/church-covenant" }
+      { name: "Church Covenant", path: "/about/church-covenant" },
+      { name: "Blogs", path: "/about/blogs" },
     ]
   },
   {

@@ -88,9 +88,16 @@ function Pastoral() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:ml-10 ml-6 mr-6 md:mr-17 rounded-sm">
                 {pastoralTeam.map((proj) => (
+                    // <PastoralTeams
+                    //     key={proj._id}
+                    //     image={proj.img}
+                    //     title={proj.position}
+                    //     name={proj.name}
+                    //     desc={proj.desc}
+                    // />
                     <PastoralTeams
                         key={proj._id}
-                        image={proj.img}
+                        image={`${API.defaults.baseURL}${proj.img}`}
                         title={proj.position}
                         name={proj.name}
                         desc={proj.desc}
